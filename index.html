@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Lógico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Operaciones Lógicas con Casillas de Verificación</h1>
+    <div class="form-container">
+      <form>
+        <label>
+          <input type="checkbox" id="checkbox1"> 0
+        </label>
+        <label>
+          <input type="checkbox" id="checkbox2"> 1
+        </label>
+      </form>
+    </div>
+    <div class="results-container">
+      <h2>Resultados</h2>
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>Operación</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AND</td>
+            <td><span id="result-and">false</span></td>
+          </tr>
+          <tr>
+            <td>OR</td>
+            <td><span id="result-or">false</span></td>
+          </tr>
+          <tr>
+            <td>XOR</td>
+            <td><span id="result-xor">false</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script>
+    const checkbox1 = document.getElementById("checkbox1");
+    const checkbox2 = document.getElementById("checkbox2");
+    const resultAnd = document.getElementById("result-and");
+    const resultOr = document.getElementById("result-or");
+    const resultXor = document.getElementById("result-xor");
+
+    function updateResults() {
+      const val1 = checkbox1.checked;
+      const val2 = checkbox2.checked;
+      
+      resultAnd.textContent = (val1 && val2) ? "true" : "false";
+      resultOr.textContent = (val1 || val2) ? "true" : "false";
+      resultXor.textContent = (val1 !== val2) ? "true" : "false";
+    }
+
+    checkbox1.addEventListener("change", updateResults);
+    checkbox2.addEventListener("change", updateResults);
+  </script>
+</body>
+</html>

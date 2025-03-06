@@ -1,0 +1,41 @@
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para el formulario */
+.form-container {
+  background: #34495e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* Estilo para la tabla de resultados */
+.results-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: #ecf0f1;
+  color: #2c3e50;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.results-container th, 
+.results-container td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #bdc3c7;
+}
+
+.results-container th {
+  background: #3498db;
+  color: white;
+}
+
+.results-container tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
